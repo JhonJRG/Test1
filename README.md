@@ -31,7 +31,13 @@
 
      ```git branch --set-upstream master origin/master```
 
-     这样在我们每次想push或者pull的时候，只需要 输入 ```git push``` 或者 ```git pull``` 即可。
+     这样在我们每次想push或者pull的时候，只需要输入 ```git push``` 
+     
+     或者
+     
+     ```git pull```
+     
+     即可。
 
      在此之前，我们必须要指定想要push或者pull的远程分支。
 
