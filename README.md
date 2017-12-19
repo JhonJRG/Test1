@@ -25,18 +25,18 @@
     ```git remote rename gitlab newname``` 修改远程库的名字
     
     
-    >
-       我们设置master对应远程仓库的master分支
+    
+    > 我们设置master对应远程仓库的master分支
 
-       git branch --set-upstream master origin/master
+    > git branch --set-upstream master origin/master
 
-       这样在我们每次想push或者pull的时候，只需要 输入git push 或者git pull即可。
+    > 这样在我们每次想push或者pull的时候，只需要 输入git push 或者git pull即可。
 
-       在此之前，我们必须要指定想要push或者pull的远程分支。
+    > 在此之前，我们必须要指定想要push或者pull的远程分支。
 
-       git push origin master
+    > git push origin master
 
-       git pull origin master
+    > git pull origin master
    
    
    
