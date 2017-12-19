@@ -37,8 +37,8 @@
 
        在此之前，我们必须要指定想要push或者pull的远程分支。
 
-       ````git push origin master````
+       git push origin master
 
-       ````git pull origin master````
+       git pull origin master
   
    ```
