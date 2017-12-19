@@ -23,11 +23,8 @@
     ```git remote set-url origin git@xxx.qq.com/Test1.git``` 修改远程推送地址，例如https地址换成ssh地址
     
     ```git remote rename gitlab newname``` 修改远程库的名字
-    
-    
-    
-   6 
-     我们设置master对应远程仓库的master分支
+           
+   6 我们设置master对应远程仓库的master分支
 
      ```git branch --set-upstream master origin/master```    
     
@@ -35,11 +32,11 @@
 
    在此之前，我们必须要指定想要push或者pull的远程分支 ```git push origin master``` ```git pull origin master```
    
-   
-   
+ 
    **分支操作（分支操作可以将代码线上预览测试如无问题可以合并到master上）** 
    
    
+   - 分支的dev和master的关系可以认为：master属于线上预览的东西，dev属于在开发的东西。一个是样品，一个是草稿（切换不同的分支显示不同的文件内容）   
          
    
    - 查看所有分支            ```git branch -a``` （蓝色代表本地分支，红色代表远程分支  * 代表当前所处分支）
@@ -65,7 +62,3 @@
    
    
    - 指定 git pull合并（自动合并） ```git pull origin master```
-  
-   - 分支的dev和master的关系可以认为：master属于线上预览的东西，dev属于在开发的东西。
-   
-   一个是样品，一个是草稿（切换不同的分支显示不同的文件内容）
