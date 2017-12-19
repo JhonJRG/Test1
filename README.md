@@ -17,8 +17,13 @@
   
     ```git remote -v```  查看本地库里的远程库地址（这个地址是可变的，只要是支持远程仓库的站点都可以生成地址，都能本地推送到任何远程库）
     
+    ```git remote remove abc``` 移除某个地址
+
+    ```git status``` 可以列出当前目录所有还没有被git管理的文件和被git管理且被修改但还未提交(git commit)的文件
+
     ```git push -f origin master```  慎用：强制推送，会覆盖别人的代码
     
-    ```git status``` 可以列出当前目录所有还没有被git管理的文件和被git管理且被修改但还未提交(git commit)的文件
+    ```git remote set-url origin git@xxx.qq.com/Test1.git``` 修改远程推送地址，例如https地址换成ssh地址
     
+    ```git remote rename gitlab newname``` 修改远程库的名字
   暂时到这里
