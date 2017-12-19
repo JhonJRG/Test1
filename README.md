@@ -26,9 +26,10 @@
     
     
     
-    > 我们设置master对应远程仓库的master分支
+   6 我们设置master对应远程仓库的master分支
 
-      git branch --set-upstream master origin/master
+   
+    >      git branch --set-upstream master origin/master
 
       这样在我们每次想push或者pull的时候，只需要 输入git push 或者git pull即可。
 
