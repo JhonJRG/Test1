@@ -25,7 +25,7 @@
     ```git remote rename gitlab newname``` 修改远程库的名字
     
     
-    ```
+    >
        我们设置master对应远程仓库的master分支
 
        git branch --set-upstream master origin/master
@@ -37,11 +37,10 @@
        git push origin master
 
        git pull origin master
-  
-    ```
    
    
    
    **分支操作（分支操作可以将代码线上预览测试如无问题可以合并到master上）** 
    
-   - 分支的dev和master的关系可以认为：master属于线上预览的东西，dev属于在开发的东西。一个是样品，一个是草稿（切换不同的分支显示不同的文件内容）
+   + 分支的dev和master的关系可以认为：master属于线上预览的东西，dev属于在开发的东西。一个是样品，一个是草稿
+   （切换不同的分支显示不同的文件内容）
