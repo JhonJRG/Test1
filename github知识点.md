@@ -57,7 +57,8 @@
  - 指定 git pull合并（自动合并） ```git pull origin master```
  
  
-  **新增NEW  
+  **新增NEW
+  
  - 更改远程分支的名字  ```git remote rename ceshifork fork_dev```
  - 删除远程分支      ```git remote remove fork_dev```
 
