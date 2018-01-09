@@ -56,8 +56,8 @@
  - 冲突：指的是另一个人clone文件并改变了文件而你没有pull也改了信息并上传，手动更改文件并push即可（猜测因为提交时间点的不同及时pull了也会有冲突）
  - 指定 git pull合并（自动合并） ```git pull origin master```
  
- 
-  **新增NEW
- - 更改远程分支的名字  ```git remote rename ceshifork fork_dev```
+  **新增NEW**
+  
+ - 更改远程分支的名字  ```git remote rename ceshifork fork_dev```
  - 删除远程分支      ```git remote remove fork_dev```
 
