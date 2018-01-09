@@ -61,4 +61,15 @@
  - 更改远程分支的名字  ```git remote rename ceshifork fork_dev```
  - 删除远程分支      ```git remote remove fork_dev```
  - 新建远程分支     ```git remote add dev_fetch git@github.com:JhonJRG/Web-Developer.git```
+ - 删除本地分支    ```git branch -D dev
 
+  **新知new**
+  
+  - 分支分远程和本地，本地的不同分支对应不同远程分支
+  
+    ```git pull(push) origin master```  ```git pull(push) dev_remote dev``` 
+    
+    注意 pull或push在不同分支要分清，例如本地主分支pull/push远程主分支，本地开发分支pull/push远程开发分支
+    
+    
+    
