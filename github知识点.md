@@ -1,6 +1,6 @@
- #### 以下是复习发现的重点
+ ### 以下是复习发现的重点
 
- ##### 注意： 
+ #### 注意： 
  
   1 .ssh是秘钥文件，是在本地用户名下的隐藏文件夹，如果不刷机不会消失。id_rsa.pub是公钥文件 id_rsa是私钥文件。最好备份一个位置。
   
@@ -57,7 +57,7 @@
  - 指定 git pull合并（自动合并） ```git pull origin master```
  
  
- ## 新增NEW
+ #### 新增NEW
   
  - 更改远程分支的名字  ```git remote rename ceshifork fork_dev```
  - 删除远程分支      ```git remote remove fork_dev```
