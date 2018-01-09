@@ -22,8 +22,8 @@
     
     ```git remote set-url origin git@xxx.qq.com/Test1.git``` 修改远程推送地址，例如https地址换成ssh地址
     
-    ```git remote rename gitlab newname``` 修改远程库的名字
-    
+    ```git remote rename gitlab newname``` 修改远程库的名字（疑）
+    
   6 如何把本地空文件夹变成仓库并推送到远程仓库 关键是以下这两句
 
  （1）```git init``` （获取.git文件）
