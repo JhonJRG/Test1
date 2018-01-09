@@ -1,0 +1,57 @@
+一
+查看本地分支
+git branch -a (星号当前分支、绿色及灰色为本地分支、红色为远程分支)
+
+删除本地分支
+git branch -d dev
+
+新建本地分支
+git branch dev
+
+切换本地分支
+git checkout dev
+
+查看远程分支
+git remote -v
+
+新增远程分支
+git remote add dev_remote git@github.com:JhonJRG/Web-Developer.git
+
+更改远程分支名字
+git remote rename dev_remote dev_new_remote
+
+更改远程分支地址
+git remote set-url dev_new_remote git@abc.com/abc.git
+
+删除远程分支
+git remote remove dev_remote
+
+ 
+二
+切换本地分支
+git checkout dev
+
+新建文件（本地做改变之后再去push才管用，增啥改查都行）
+touch dev_test.md
+
+提交步骤
+
+git add .
+
+git commit -am "Update info"
+
+git push dev_new_remote dev
+
+
+切换本地分支master
+git checkout master
+
+合并分支
+git merge dev
+
+提交步骤
+git add .
+
+git commit -am "Update info"
+
+git push origin master
