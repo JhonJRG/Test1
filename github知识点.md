@@ -61,7 +61,7 @@
  - 更改远程分支的名字  ```git remote rename ceshifork fork_dev```
  - 删除远程分支      ```git remote remove fork_dev```
  - 新建远程分支     ```git remote add dev_fetch git@github.com:JhonJRG/Web-Developer.git```
- - 删除本地分支    ```git branch -D dev
+ - 删除本地分支    ```git branch -d dev
 
   **新知new**
   
