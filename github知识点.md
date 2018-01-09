@@ -44,8 +44,8 @@
    
  
    **分支操作（分支操作可以将代码线上预览测试如无问题可以合并到master上）**
-   
-  - 分支的dev和master的关系可以认为：master属于线上预览的东西，dev属于在开发的东西。一个是样品，一个是草稿（切换不同的分支显示不同的文件内容）   
+
+- 分支的dev和master的关系可以认为：master属于线上预览的东西，dev属于在开发的东西。一个是样品，一个是草稿（切换不同的分支显示不同的文件内容）   
    - 查看所有分支            ```git branch -a``` （蓝色代表本地分支，红色代表远程分支  * 代表当前所处分支）
    - 创建本地库dev（开发）分支  ```git branch dev```   
    - 切换到dev分支             ```git checkout dev```
@@ -55,3 +55,9 @@
    
    - 冲突：指的是另一个人clone文件并改变了文件而你没有pull也改了信息并上传，手动更改文件并push即可（猜测因为提交时间点的不同及时pull了也会有冲突）
    - 指定 git pull合并（自动合并） ```git pull origin master```
+
+   **new
+  
+  - 更改远程分支的名字  ```git remote rename ceshifork fork_dev```
+  - 删除远程分支      ```git remote remove fork_dev```
+
