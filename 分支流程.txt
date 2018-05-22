@@ -1,40 +1,40 @@
-Ò»
-²é¿´±¾µØ·ÖÖ§
-git branch -a (ĞÇºÅµ±Ç°·ÖÖ§¡¢ÂÌÉ«¼°»ÒÉ«Îª±¾µØ·ÖÖ§¡¢ºìÉ«ÎªÔ¶³Ì·ÖÖ§)
+ä¸€
+æŸ¥çœ‹æ‰€æœ‰åˆ†æ”¯
+git branch -a (æ˜Ÿå·å½“å‰åˆ†æ”¯ã€ç»¿è‰²åŠç°è‰²ä¸ºæœ¬åœ°åˆ†æ”¯ã€çº¢è‰²ä¸ºè¿œç¨‹åˆ†æ”¯)
 
-É¾³ı±¾µØ·ÖÖ§
+åˆ é™¤æœ¬åœ°åˆ†æ”¯
 git branch -d dev
 
-ĞÂ½¨±¾µØ·ÖÖ§
+æ–°å»ºæœ¬åœ°åˆ†æ”¯
 git branch dev
 
-ÇĞ»»±¾µØ·ÖÖ§
+åˆ‡æ¢æœ¬åœ°åˆ†æ”¯
 git checkout dev
 
-²é¿´Ô¶³Ì·ÖÖ§
+æŸ¥çœ‹è¿œç¨‹åˆ†æ”¯
 git remote -v
 
-ĞÂÔöÔ¶³Ì·ÖÖ§
+æ–°å¢è¿œç¨‹åˆ†æ”¯
 git remote add dev_remote git@github.com:JhonJRG/Web-Developer.git
 
-¸ü¸ÄÔ¶³Ì·ÖÖ§Ãû×Ö
+æ›´æ”¹è¿œç¨‹åˆ†æ”¯åå­—
 git remote rename dev_remote dev_new_remote
 
-¸ü¸ÄÔ¶³Ì·ÖÖ§µØÖ·
+æ›´æ”¹è¿œç¨‹åˆ†æ”¯åœ°å€
 git remote set-url dev_new_remote git@abc.com/abc.git
 
-É¾³ıÔ¶³Ì·ÖÖ§
+åˆ é™¤è¿œç¨‹åˆ†æ”¯
 git remote remove dev_remote
 
  
-¶ş
-ÇĞ»»±¾µØ·ÖÖ§
+äºŒ
+åˆ‡æ¢æœ¬åœ°åˆ†æ”¯
 git checkout dev
 
-ĞÂ½¨ÎÄ¼ş£¨±¾µØ×ö¸Ä±äÖ®ºóÔÙÈ¥push²Å¹ÜÓÃ£¬ÔöÉ¶¸Ä²é¶¼ĞĞ£©
+æ–°å»ºæ–‡ä»¶ï¼ˆæœ¬åœ°åšæ”¹å˜ä¹‹åå†å»pushæ‰ç®¡ç”¨ï¼Œå¢å•¥æ”¹æŸ¥éƒ½è¡Œï¼‰
 touch dev_test.md
 
-Ìá½»²½Öè
+æäº¤æ­¥éª¤
 
 git add .
 
@@ -43,13 +43,13 @@ git commit -am "Update info"
 git push dev_new_remote dev
 
 
-ÇĞ»»±¾µØ·ÖÖ§master
+åˆ‡æ¢æœ¬åœ°åˆ†æ”¯master
 git checkout master
 
-ºÏ²¢·ÖÖ§
+åˆå¹¶åˆ†æ”¯
 git merge dev
 
-Ìá½»²½Öè
+æäº¤æ­¥éª¤
 git add .
 
 git commit -am "Update info"
