@@ -46,7 +46,7 @@ git push dev_new_remote dev
 切换本地分支master
 git checkout master
 
-合并分支
+合并分支（注意：真的需要合并再合并 本地主支二线可单独推送到远程，这是可选的）
 git merge dev
 
 提交步骤
