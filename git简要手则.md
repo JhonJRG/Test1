@@ -18,7 +18,7 @@
    (本地支dev——>远程支dev_origin)
    git pull dev_origin master
    
- * 千万注意：在操作之先一定要注意备份git的文件，因为git pull origin master会把本地多余的全部删除掉，一次失误便会前功尽弃 
+ *千万注意：在操作之先一定要注意备份git的文件，因为git pull origin master会把本地多余的全部删除掉，一次失误便会前功尽弃* 
  
  **.git文件相当于一个日志文件，记录所有库改动动作（.git是隐藏文件，在本地仓库目录下）**
  
