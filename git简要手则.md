@@ -21,3 +21,14 @@
  
  ##### .git文件相当于操作日志，记录你的上传下载增啥改查的动作，一个仓库里没有.git你就无法git pull/git push了
  ##### .ssh文件夹存放的是公钥私钥队，位置在c盘的用户名目录下，不可丢失。假如电脑刷机前要备份一下，不然不能用。
+ 
+ 本地文件夹变仓库步骤梳理
+ 1. github新建仓库时不勾选README.md，那就不能生成仓库，这是此问题的前提
+ 2. git clone xxx会提示你没有.git文件 
+ 3. 操作git init会使本地文件夹变成仓库
+    1）touch 1.txt 
+    2）提交到远程线，如何建立连接？ 先添加远程库，再push到远程库（本地库和远程库建立连接）
+       git remote add origin    (建立远程库)
+       git add .               （提交到暂存区）
+       git commit -am 'add file'（提交到本地库）
+       git push origin master   （提交到远程库）
