@@ -2,8 +2,10 @@
 复习一下github本地远程相关操作
 
 
- **说明：这个是主线里的内容origin(远程主线) master(本地主线)**
+ **说明：主线origin(远程主线) 对应 master(本地主线)**
+ **PS2：dev_origin分支远程 对应 dev分支本地**
+ **重点文件** *分支流程.txt 手动添加Git bash 到鼠标右键.md等*
  
- **重点文件** *分支流程.txt 手动添加Git bash 到鼠标右键.md*
+ 
  
  ![](https://jhonjrg.github.io/github/Picture/IPerror.png)
