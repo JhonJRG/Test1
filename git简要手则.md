@@ -33,9 +33,7 @@
  
     1）touch 1.txt 
     
-    2）
-    
-       git remote add origin XXX (建立远程跟踪分支origin【origin与master是默认的对应关系】)
+    2）remote只是用在第一次新建分支上，clone仓库时用不到remote，只需要与远程分支建立映射，再git pull origin 【本地分支】即可
        
        git branch -vv（查看本地分支[远程分支的本地副本]与远程分支的映射关系）
        
