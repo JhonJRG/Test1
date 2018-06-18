@@ -43,7 +43,7 @@ git remote remove dev_remote
 三
 （本地）分支的upstream：（是本地分支和远程分支相互映射，建立联系，否则无法准确pull/push）
 
-查看本地分支与远程分支的映射关系（即git branch -a里的绿色分支灰色分支与红色分支之间的映射，一般直接先pull后再查看有没有对应关系）
+查看本地分支与远程分支的映射关系（即git branch -a里的绿色分支灰色分支与红色分支之间的映射）
 git branch -vv
 
 本地分支与远程分支建立映射
