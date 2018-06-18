@@ -1,7 +1,7 @@
 原则：
 1.pull远程对应本地，push本地对应远程。
 2.pull时，要区分主支和分支，push时也要区分主支和分支；pull与push时本地分支都要有相应的远程跟踪分支。
-3.先pull，后push；先pull远程主支，后pull远程分支。先push本地分支，后push本地主支（本地分支和远程分支都是各管各的互不干扰）
+3.先pull，后push；先pull远程主支，后pull远程分支。先push本地分支，后push本地主支（本地开发分支和本地主分支相互独立，各有不同。远程开发分支与远程主分支相互独立，各有不同。本地开发分支和本地主分支都是通过各自的远程跟踪分支与其远程分支建立联系【映射关系】）
 
 此处着重描述两种关系：
 远程分支<——>本地分支
@@ -13,20 +13,17 @@
 查看本地分支
 git branch -a (星号当前本地分支、绿色及灰色为本地分支、红色为远程分支)
 
-删除本地分支
+删除本地开发分支
 git branch -d dev
 
-新建本地分支
+新建本地开发分支
 git branch dev
 
-切换本地分支
+切换本地开发分支
 git checkout dev
 
-查看远程分支
-git remote -v
-
 二
-远程跟踪分支：[和本地分支一起执行pull/push语句，如同本地分支与远程分支之间的中介。例如origin（远程跟踪分支）与master（本地分支）]
+远程跟踪分支：[和本地分支一起执行pull/push语句，如同本地分支与远程分支之间的中介。例如默认的origin（远程跟踪分支）与master（本地分支）]
 
 查看远程跟踪分支
 git remote -v
@@ -44,9 +41,9 @@ git remote set-url dev_new_remote git@abc.com/abc.git
 git remote remove dev_remote
 
 三
-（本地）分支的upstream：（是本地分支和远程分支相互映射，建立联系，否则无法pull/push）
+（本地）分支的upstream：（是本地分支和远程分支相互映射，建立联系，否则无法准确pull/push）
 
-查看本地分支与远程分支的映射关系（即git branch -a里的绿色分支灰色分支与红色分支之间的映射）
+查看本地分支与远程分支的映射关系（即git branch -a里的绿色分支灰色分支与红色分支之间的映射，一般直接先pull后再查看有没有对应关系）
 git branch -vv
 
 本地分支与远程分支建立映射
@@ -68,25 +65,25 @@ git push -u origin master
 三
 远程分支与分支本地（先pull，后push）
 
-在本地分支master中pull远程跟踪分支origin
+在本地主分支master中pull远程跟踪分支origin
 git pull origin master
 
-切换本地分支
+切换本地开发分支dev
 git checkout dev
 
 新建文件（本地做改变之后再去push才管用，增删更直观）
 touch dev_test.md
 
-提交步骤
+本地开发分支push远程开发分支流程：
 
-git add .
+git add . （添加到暂存区）
 
-git commit -am "Update info"
+git commit -am "Update info" （添加到本地库）
 
-git push dev_remote dev
+git push dev_remote dev （添加到远程开发分支）
 
 
-切换本地分支master
+切换本地主分支master
 git checkout master
 
 合并分支（本地开发分支dev里的内容相当于草稿，本地主分支里的内容相当于成品。merge是将本地开发分支成品的文件【可以是增删】添加到本地主分支里，再通过远程主跟踪分支push到远程主分支上）
@@ -99,11 +96,12 @@ git merge --abort
 撤销合并（意思是努力重置？额）
 git reset --hard
 
-提交步骤
-git add .
+本地主分支提交到远程主分支流程
 
-git commit -am "Update info"
+git add . （添加到暂存区）
 
-git push origin master
+git commit -am "Update info" （添加到本地库）
+
+git push origin master （添加到远程主分支）
 
 git status （查看状态）
