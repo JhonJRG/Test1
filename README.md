@@ -1,12 +1,12 @@
-# github 有空写一下操作大全吧！
-复习一下github本地远程相关操作
+# github 先理解理论，后在操作中磨练！
+复习及总结一下github本地远程相关操作
 
 
- **说明：主线origin(远程主线) 对应 master(本地主线)**
+ **说明：主机origin(远程主机) 对应 master(远程master分支的本地副本)**
  
- **PS2：dev_origin分支远程 对应 dev分支本地**
+ **主机origin  remotes/origin/dev（远程dev分支） 对应 dev(远程dev分支的本地副本)**
  
- **重点文件** *分支流程.txt git简要手则.md等*
+   也就是说主机是不变的，重要的只是远程分支和本地分支的对应关系。
  
  
  
