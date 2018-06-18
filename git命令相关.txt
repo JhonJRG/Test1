@@ -8,7 +8,7 @@ git clone远程仓库的分支（重要）：
 git checkout -b dev origin/dev
 上面的语句作用是在本地创建新的分支，分支的名称是dev，dev也是我想要clone的分支的名字，这里为了便于理解将本地的分支名字和clone的分支名字设为一样，其实-b后面的dev可以随意设置。 
 执行完上述语句后，会发现你想clone的code已经在你的本地老老实实的待着了。 
-如果后来这个分支的作者又有了更新，你可以使用如下命令获取最新的分支内容：git pull origin aaa
+如果后来这个分支的作者又有了更新，你可以使用如下命令获取最新的分支内容：git pull origin dev
 
 一
 本地分支：
@@ -75,7 +75,8 @@ git remote show（也可以通过这条语句查看）
 （下面命令将本地的master分支推送到origin主机，同时指定origin为默认主机，后面就可以不加任何参数使用git push了）
 git push -u origin master
 
-不带任何参数的git push，默认只推送当前分支，这叫做simple方式。此外，还有一种matching方式，会推送所有有对应的远程分支的本地分支。Git 2.0版本之前，默认采用matching方法，现在改为默认采用simple方式。如果要修改这个设置，可以采用git config命令。
+不带任何参数的git push，默认只推送当前分支，这叫做simple方式。此外，还有一种matching方式，会推送所有有对应的远程分支的本地分支。
+Git 2.0版本之前，默认采用matching方法，现在改为默认采用simple方式。如果要修改这个设置，可以采用git config命令。
 $ git config --global push.default matching
 # 或者
 $ git config --global push.default simple
@@ -90,14 +91,16 @@ Shell
 三
 远程分支与分支本地（先pull，后push）
 
-git pull命令用于从另一个存储库或本地分支获取并集成(整合)。git pull命令的作用是：取回远程主机某个分支的更新，再与本地的指定分支合并，它的完整格式稍稍有点复杂
+git pull命令用于从另一个存储库或本地分支获取并集成(整合)。git pull命令的作用是：取回远程主机某个分支的更新，再与本地的
+指定分支合并，它的完整格式稍稍有点复杂
 使用语法
 git pull [options] [<repository> [<refspec>…]]
 
 描述
 将远程存储库中的更改合并到当前分支中。在默认模式下，git pull是git fetch后跟git merge FETCH_HEAD的缩写。
 
-更准确地说，git pull使用给定的参数运行git fetch，并调用git merge将检索到的分支头合并到当前分支中。 使用--rebase，它运行git rebase而不是git merge
+更准确地说，git pull使用给定的参数运行git fetch，并调用git merge将检索到的分支头合并到当前分支中。 
+使用--rebase，它运行git rebase而不是git merge
 
 示例
 以下是一些示例 -
@@ -105,7 +108,7 @@ git pull [options] [<repository> [<refspec>…]]
 $ git pull <远程主机名> <远程分支名>:<本地分支名>
 Shell
 
-比如，要取回origin主机的next分支，与本地的master分支合并，需要写成下面这样 -
+比如，要取回origin主机的next分支，与本地的master分支合并，需要写成下面这样
 $ git pull origin next:master
 Shell
 
@@ -118,7 +121,8 @@ $ git fetch origin
 $ git merge origin/next
 Shell
 
-在某些场合，Git会自动在本地分支与远程分支之间，建立一种追踪关系(tracking)。比如，在git clone的时候，所有本地分支默认与远程主机的同名分支，建立追踪关系，也就是说，本地的master分支自动”追踪”origin/master分支。
+在某些场合，Git会自动在本地分支与远程分支之间，建立一种追踪关系(tracking)。比如，在git clone的时候，所有本地分支
+默认与远程主机的同名分支，建立追踪关系，也就是说，本地的master分支自动”追踪”origin/master分支。
 
 Git也允许手动建立追踪关系。
 $ git branch --set-upstream master origin/next
@@ -135,6 +139,8 @@ $ git pull
 Shell
 上面命令表示，当前分支自动与唯一一个追踪分支进行合并。
 
+
+——————————————————————————————————————————————————————————————————————————————————————————
 如果合并需要采用rebase模式，可以使用–rebase选项。
 $ git pull --rebase <远程主机名> <远程分支名>:<本地分支名>
 Shell
@@ -163,7 +169,7 @@ git pull origin master
 Shell
 上述命令其实相当于git fetch 和 git merge
 在实际使用中，git fetch更安全一些，因为在merge前，我们可以查看更新情况，然后再决定是否合并。
-
+——————————————————————————————————————————————————————————————————————————————————————————
 
 
 
