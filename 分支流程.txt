@@ -104,3 +104,5 @@ git add .
 git commit -am "Update info"
 
 git push origin master
+
+git status （查看状态）
