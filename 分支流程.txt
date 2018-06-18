@@ -89,7 +89,8 @@ git push dev_remote dev
 切换本地分支master
 git checkout master
 
-合并分支（合并意即将本地dev的内容全部合并到master里，两个本地分支相同的部分一定要一致，否则会冲突。一般在dev里新增文件再merge到master里）
+合并分支（本地开发分支dev里的内容相当于草稿，本地主分支里的内容相当于成品。merge是将本地开发分支成品的文件【可以是增删】添加到本地主分支里，再通过远程主跟踪分支push到远程主分支上）
+
 git merge dev（在master里执行此句）
 
 撤销合并（安全撤销）
