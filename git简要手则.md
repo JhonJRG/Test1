@@ -55,3 +55,5 @@
        git commit -am 'add file'（提交到本地库）
        
        git push origin master   （提交到远程库【即通过远程跟踪分支push到远程分支】）
+       
+       git status （查看执行状态【文件变动信息】）
