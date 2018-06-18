@@ -46,8 +46,12 @@
     
        git remote add origin XXX (建立远程跟踪分支origin【origin与master是默认的对应关系】)
        
-       git add .               （提交到暂存区）
+       git branch -vv（查看本地分支[远程分支副本]与远程分支的映射关系）
+       
+       git branch -u origin/master master（建立本地分支与远程分支映射关系[此为默认关系可以通过上一步观察]）
+       
+       git add .               （提交到暂存区）
        
        git commit -am 'add file'（提交到本地库）
        
-       git push origin master   （提交到远程库）
+       git push origin master   （提交到远程库【即通过远程跟踪分支push到远程分支】）
