@@ -27,7 +27,10 @@ git branch
 查看远程分支
 git branch -r
 
-删除本地开发分支
+删除远程分支
+git push -u origin :dev(相当于git push [远程主机] [远程分支]:[本地分支]，意为从本地分支推送了一个空的远程分支即是删除远程分支，U的全称是Upsteam)
+
+删除本地开发分支（要不在dev上才能删除）
 git branch -d dev
 
 新建本地开发分支
@@ -37,24 +40,24 @@ git branch dev
 git checkout dev
 
 二
-远程分支：
+远程主机：
 
-查看远程分支
+查看远程主机
 git remote -v（同git remote --verbose[verbose的意思是冗长的，意思是显示全称]）
 
-查看已经存在的远程分支
+查看已经存在的远程主机
 git remote
 
-新增远程分支
+新增远程主机
 git remote add dev_remote git@github.com:JhonJRG/git@github.com:JhonJRG/github.git
 
-更改远程分支名字
+更改远程主机名字
 git remote rename dev_old dev_new_remote
 
-更改远程分支地址
+更改远程主机地址
 git remote set-url dev_new_remote git@abc.com/abc.git
 
-删除远程分支
+删除远程主机
 git remote remove dev_new_remote
 
 三
