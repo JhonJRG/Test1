@@ -13,7 +13,7 @@ git checkout -b dev origin/dev
 如果后来这个分支的作者又有了更新，你可以使用如下命令获取最新的分支内容：git pull origin dev
 
 一
-本地分支：
+分支：
 
 查看本地分支
 git branch -a (星号当前本地分支、绿色及灰色为本地分支、红色为远程分支)
@@ -30,6 +30,9 @@ git branch -r
 删除远程分支
 git push -u origin :dev(相当于git push [远程主机] [远程分支]:[本地分支]，意为从本地分支推送了一个空的远程分支即是删除远程分支，U的全称是Upsteam)
 
+新建远程分支
+git push -u origin dev(相当于git push -u origin dev:dev，意为从本地分支推送到一个远程主机名为origin的远程分支dev里)
+
 删除本地开发分支（要不在dev上才能删除）
 git branch -d dev
 
@@ -39,28 +42,8 @@ git branch dev
 切换本地开发分支
 git checkout dev
 
+
 二
-远程主机：
-
-查看远程主机
-git remote -v（同git remote --verbose[verbose的意思是冗长的，意思是显示全称]）
-
-查看已经存在的远程主机
-git remote
-
-新增远程主机
-git remote add dev_remote git@github.com:JhonJRG/git@github.com:JhonJRG/github.git
-
-更改远程主机名字
-git remote rename dev_old dev_new_remote
-
-更改远程主机地址
-git remote set-url dev_new_remote git@abc.com/abc.git
-
-删除远程主机
-git remote remove dev_new_remote
-
-三
 （本地）分支的upstream：（是本地分支和远程分支相互映射，建立联系，否则无法准确pull/push）
 
 查看本地分支与远程分支的映射关系（即git branch -a里的绿色分支灰色分支与红色分支之间的映射）
@@ -69,7 +52,8 @@ git branch -vv
 本地分支与远程分支建立映射（必须执行此步，不然你思路肯定是混乱的）
 git branch -u origin/dev dev（不切换本地分支直接设置其他本地分支的upstream）
 git branch -u origin/dev（此命令的含义是，是指当前分支的upstream为origin远程仓库的dev分支。需切换本地分支）
-git branch --set-upstream to=origin/dev（与上一句含义一致，也同需切换本地分支） 
+git branch --set-upstream to=origin/dev（与上一句含义一致，也同需切换本地分支）
+git branch --set-upstream dev origin/dev（在本地分支dev里执行此句，与远程分支origin/dev映射。不建议这样使用，好像是被遗弃的用法）
 
 取消upstream
 git branch --unset-upstream（取消当前分支的upstream）
@@ -96,10 +80,30 @@ $ git push --all origin
 Shell
 上面命令表示，将所有本地分支都推送到origin主机。
 
-
-
 三
-远程分支与分支本地（先pull，后push）
+远程主机：
+
+查看远程主机
+git remote -v（同git remote --verbose[verbose的意思是冗长的，意思是显示全称]）
+
+查看已经存在的远程主机
+git remote
+
+新增远程主机
+git remote add dev_remote git@github.com:JhonJRG/git@github.com:JhonJRG/github.git
+
+更改远程主机名字
+git remote rename dev_old dev_new_remote
+
+更改远程主机地址
+git remote set-url dev_new_remote git@abc.com/abc.git
+
+删除远程主机
+git remote remove dev_new_remote
+
+
+四.pull详解
+
 
 git pull命令用于从另一个存储库或本地分支获取并集成(整合)。git pull命令的作用是：取回远程主机某个分支的更新，再与本地的
 指定分支合并，它的完整格式稍稍有点复杂
@@ -203,6 +207,9 @@ $ git rebase origin/master
 上面命令表示在当前分支上，合并origin/master
 ________________________________________________________________________________________________________
 
+四.1 练习
+远程分支与本地分支（先pull，后push）
+在远程主机origin上取回远程分支master与本地分支master合并，可以简写为git pull origin master
 git pull origin master:master
 
 切换本地开发分支dev
@@ -243,4 +250,4 @@ git push origin master （添加到远程主分支）
 
 git status （查看状态）
 
-git status -s （查看状态更多）
+git status -s （查看状态更多，似乎暂时无效果）
