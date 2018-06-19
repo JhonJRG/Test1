@@ -30,6 +30,12 @@ git branch -r
 查看所有分支的详细（verbose冗余）
 git branch -av
 
+查看所有分支映射（本地——远程）
+git branch -vv
+
+新建本地分支并切换到新建的本地分支并与远程分支映射
+git checkout -b dev origin/dev
+
 删除远程分支
 git push -u origin :dev(相当于git push [远程主机] [远程分支]:[本地分支]，意为从本地分支推送了一个空的远程分支即是删除远程分支，U的全称是Upsteam)
 
