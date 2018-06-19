@@ -195,12 +195,6 @@ git branch命令的-r选项，可以用来查看远程分支，-a选项查看所
 $ git checkout -b newBrach origin/master
 上面命令表示，在origin/master的基础上，创建一个新分支:newBrach
 
-此外，也可以使用git merge命令或者git rebase命令，在本地分支上合并远程分支。
-$ git merge origin/master
-# 或者
-$ git rebase origin/master
-上面命令表示在当前分支上，合并origin/master
-
 ________________________________________________________________________________________________________
 
 git pull origin master:master
