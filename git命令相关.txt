@@ -27,6 +27,9 @@ git branch
 查看远程分支
 git branch -r
 
+查看所有分支的详细（verbose冗余）
+git branch -av
+
 删除远程分支
 git push -u origin :dev(相当于git push [远程主机] [远程分支]:[本地分支]，意为从本地分支推送了一个空的远程分支即是删除远程分支，U的全称是Upsteam)
 
@@ -101,6 +104,8 @@ git remote set-url dev_new_remote git@abc.com/abc.git
 删除远程主机
 git remote remove dev_new_remote
 
+查看远程主机日志
+git remote show origin
 
 四.pull详解
 
