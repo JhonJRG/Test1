@@ -59,7 +59,7 @@ git checkout dev
 git branch -vv
 
 本地分支与远程分支建立映射（必须执行此步，不然你思路肯定是混乱的）
-git branch -u origin/dev dev（不切换本地分支直接设置其他本地分支的upstream）
+git branch -u origin/dev dev（不切换本地分支直接设置其他本地分支的upstream，如果发现对应关系错了可以直接用这条改正过来，不必非得取消分支）
 git branch -u origin/dev（此命令的含义是，是指当前分支的upstream为origin远程仓库的dev分支。需切换本地分支）
 git branch --set-upstream to=origin/dev（与上一句含义一致，也同需切换本地分支）
 git branch --set-upstream dev origin/dev（在本地分支dev里执行此句，与远程分支origin/dev映射。不建议这样使用，好像是被遗弃的用法）
