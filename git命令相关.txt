@@ -37,7 +37,7 @@ git branch -vv
 git checkout -b dev origin/dev
 
 删除远程分支
-git push -u origin :dev(相当于git push [远程主机] [远程分支]:[本地分支]，意为从本地分支推送了一个空的远程分支即是删除远程分支，U的全称是Upsteam)
+git push -u origin :dev(相当于git push [远程主机] [远程分支]:[本地分支]，意为从本地分支推送了一个空的远程分支即是删除远程分支，U的全称是Upstream)
 
 新建远程分支
 git push -u origin dev(相当于git push -u origin dev:dev，意为从本地分支推送到一个远程主机名为origin的远程分支dev里)
