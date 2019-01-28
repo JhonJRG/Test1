@@ -47,7 +47,7 @@
        
        git add .               （提交到暂存区）
        
-       git commit -am 'add file'（提交到本地库）
+       git commit -am 'add file'（提交到本地库）
        
        git push origin master   （提交到远程库）
        
