@@ -15,7 +15,7 @@ git checkout -b dev origin/dev
 一
 分支：
 
-查看本地分支
+查看所有分支
 git branch -a (星号当前本地分支、绿色及灰色为本地分支、红色为远程分支)
 
 remotes/origin/master:origin表示远程主机，master表示远程主机的master分支
