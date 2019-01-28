@@ -36,10 +36,8 @@
  2. git clone xxx会提示你没有.git文件 
  
  3. 操作git init会使本地文件夹变成仓库
- 
- 
-    1）touch 1.txt 
-    
+  
+    1）touch 1.txt       
     2）remote只是用在第一次新建分支上，clone仓库时用不到remote，只需要与远程分支建立映射，再git pull origin 【本地分支】即可
        
        git branch -vv（查看本地分支[远程分支的本地副本]与远程分支的映射关系）
