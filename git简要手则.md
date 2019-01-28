@@ -40,7 +40,8 @@
     1）touch 1.txt
     
     2）remote只是用在第一次新建分支上，clone仓库时用不到remote，只需要与远程分支建立映射，再git pull origin 【本地分支】即可
-       
+    
+
        git branch -vv（查看本地分支[远程分支的本地副本]与远程分支的映射关系）
        
        git branch -u origin/master master（建立本地分支与远程分支映射关系[此为默认关系可以通过上一步观察]）
