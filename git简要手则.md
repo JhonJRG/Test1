@@ -37,6 +37,7 @@
  
  3. 操作git init会使本地文件夹变成仓库
  
+ 
     1）touch 1.txt 
     
     2）remote只是用在第一次新建分支上，clone仓库时用不到remote，只需要与远程分支建立映射，再git pull origin 【本地分支】即可
